@@ -108,6 +108,9 @@ Baseline roles:
 - `character_rewrite_rule`: short character-level rewrite baseline for internal
   spelling/sound correspondences.
 
+## Evaluation
+
+See /src for scoring, error analysis, and reporting scripts for the Romani dialect form transduction benchmark.
 
 ## Tests
 

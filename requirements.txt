@@ -1,0 +1,9 @@
+# Core benchmark dependencies.
+#
+# Install with:
+#   python -m pip install -r requirements.txt
+
+pandas>=2.0
+rapidfuzz>=3.0
+
+scipy>=1.10

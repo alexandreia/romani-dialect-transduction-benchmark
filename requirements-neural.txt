@@ -1,0 +1,13 @@
+# Optional neural-model dependencies for src/models/train_byt5.py.
+#
+# Install only when you are ready to train ByT5:
+#   python -m pip install -r requirements-neural.txt
+
+-r requirements.txt
+
+accelerate>=0.27
+datasets>=2.18
+sentencepiece>=0.1.99
+torch>=2.0
+transformers>=4.38
+

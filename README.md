@@ -3,10 +3,6 @@
 This project is building a research benchmark for low-resource Romani dialect
 form transduction.
 
-The current focus is not neural modeling yet. The current focus is a clean,
-auditable dataset layer and simple baselines that make the task scientifically
-well-defined.
-
 In practical terms, the project asks:
 
 ```text
@@ -24,13 +20,7 @@ target form:   me kǝrav
 slot:          1SG
 ```
 
-## Project Documents
-
-- Proposal: [proposal/Project_Proposal_Andreia_Alexa.pdf](proposal/Project_Proposal_Andreia_Alexa.pdf)
-  — *Evaluating Romani dialect sample-to-sample form transduction: Benchmark
-  design, baselines and data leakage*
-
-Research questions:
+## Research questions
 
 - **Q1:** How do different train/test splits affect measured performance in
   Romani dialect form transduction?
@@ -45,20 +35,7 @@ Low-resource dialect-to-dialect form transduction for Romani varieties,
 with special attention to inflectional paradigm slots.
 ```
 
-The dataset and scripts are inspired by morphological reinflection/transduction
-work, but adapted to dialect sample pairs. The project preserves comparative
-dialect metadata such as `sample_id`, `variety`, `item_id`, and `meaning`.
-
-
 ## Setup
-
-Use the project virtual environment:
-
-```bash
-source .venv/bin/activate
-```
-
-If recreating the environment from scratch, install at least:
 
 ```bash
 python -m pip install -r requirements.txt
@@ -72,30 +49,6 @@ python -m pip install -r requirements-neural.txt
 
 ## Dataset Pipeline
 
-Detailed dataset documentation is in:
-
-[src/data/README.md](src/data/README.md)
-
-A command-by-command guide is in:
-
-[docs/command_guide.md](docs/command_guide.md)
-
-Current result interpretation is in:
-
-[docs/current_findings.md](docs/current_findings.md)
-
-Historical results are logged in:
-
-[docs/historical_results.md](docs/historical_results.md)
-
-The current research framing is in:
-
-[docs/research_framing.md](docs/research_framing.md)
-
-Neural model documentation is in:
-
-[src/models/README.md](src/models/README.md)
-
 The short version:
 
 ```text
@@ -108,10 +61,6 @@ raw CSV files
 
 
 ## Error Analysis
-
-The error-analysis module is:
-
-[src/evaluation/error_analysis.py](src/evaluation/error_analysis.py)
 
 It consumes a scored prediction CSV and writes diagnostic tables:
 
@@ -132,10 +81,6 @@ Example:
   --output-folder reports/error_analysis/copy_source_heldout_item_test_exclude_check
 ```
 
-Current copy-source error analysis lives in:
-
-```text
-reports/error_analysis/copy_source_heldout_item_test_exclude_check/
 ```
 
 One current finding is that copy-source performs much better on split paradigm
@@ -170,8 +115,6 @@ Baseline roles:
 python -m pip install pytest
 python -m pytest tests/ -v
 ```
-
-Run the tests before every rebuild; do not rebuild on top of a failing test.
 
 ## Next Steps
 
